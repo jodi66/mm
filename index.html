@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- <link href="./style.css" rel="stylesheet"> -->
+  <title>Home</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    header{
+      width: 100%;
+      height: 35rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("./assets/Hero Background.jpg");
+    }
+/* @keyframes halfCircleFallLeft {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  20% {
+    transform: translateX(-8rem) translateY(8rem);
+  } 
+  40% {
+    transform: translateX(-12rem) translateY(14rem);
+  }
+  60% {
+    transform: translateX(-14rem) translateY(20rem);
+  }
+  80% {
+    transform: translateX(-10rem) translateY(28rem);
+  }
+  100% {
+    transform: translateX(0) translateY(32rem);
+  }
+} */
+
+/* .element {
+  width: 50px;
+  height: 50px;
+  background-color: #040d13;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  animation: halfCircleFallLeft 4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards infinite;
+} */
+
+.portfolio-images{
+  padding: 1rem;
+}
+.single-por-image{
+  margin: 0 1rem 1rem 0;
+  padding: 0;
+}
+#image1{
+  background-image: url('./assets/Photo.png');
+  background-position: center;
+  background-size: cover;
+}
+#image2{
+  background-image: url('./assets/Photo (1).png');
+  background-position: center;
+  background-size: cover;
+}
+#image3{
+  background-image: url('./assets/Photo (2).png');
+  background-position: center;
+  background-size: cover;
+}
+.padding-servic{
+  padding: 1rem;
+}
+.single-serv-image:hover{
+  box-shadow: 8px 8px 1.5rem 4px #5c5c5c6c;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="element"></div>
+  </header>
+  <main>
+    <div class="portfolio">
+      <h2 class="margin-test text-4xl font-bold text-center">Our Portfolio</h2>
+      <div class="portfolio-images flex flex-wrap justify-between">
+        <div class="single-por-image w-[22%] h-fit rounded-md"><img src="../assets/Rectangle 1.png" alt=""></div>
+        <div class="single-por-image w-[22%] h-fit rounded-md"><img src="../assets/image.png" alt=""></div>
+        <div class="single-por-image w-[22%] h-fit rounded-md"><img src="../assets/Rectangle 1.png" alt=""></div>
+        <div class="single-por-image w-[22%] h-fit rounded-md"><img src="../assets/image.png" alt=""></div>
+        <div class="single-por-image w-[22%] h-fit rounded-md"><img src="../assets/Rectangle 1.png" alt=""></div>
+        <div class="single-por-image w-[22%] h-fit rounded-md"><img src="../assets/image.png" alt=""></div>
+        <div class="single-por-image w-[22%] h-fit rounded-md"><img src="../assets/Rectangle 1.png" alt=""></div>
+        <div class="single-por-image w-[22%] h-fit rounded-md"><img src="../assets/image.png" alt=""></div>
+      </div>
+    </div>
+
+    <div class="services bg-[#EBEBEB] !p-20 !pt-4">
+      <h2 class="text-4xl font-bold !m-8">Our Services</h2>
+      <div class="services-images flex flex-wrap justify-around">
+        <div id="hoverContainer" class="flex flex-col text-start align-middle rounded-3xl">
+          <div id="image1" class="cursor-pointer w-[22rem] h-[16rem] rounded-3xl text-white !m-3"></div>
+          <a href="#"  class="font-bold !ml-5 text-[18px] text-[#61316F]">Photography</a>
+        </div>
+        <div class="flex flex-col text-start align-middle">
+          <div id="image2" class="single-serv-image  w-[22rem] h-[16rem] rounded-3xl text-white !m-3"></div>
+            <a href="" class="font-bold !ml-5 text-[18px] text-[#61316F]">Social Media</a>
+        </div>
+        <div class="flex flex-col text-start align-middle">
+          <div id="image3" class="single-serv-image  w-[22rem] h-[16rem] rounded-3xl text-white !m-3"></div>
+            <a href="" class="font-bold !ml-5 text-[18px] text-[#61316F]">Design</a>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+    <div class="employees">
+
+    </div>
+  </main>
+  <script>
+const serviceContainers = document.querySelectorAll(".services-images > div");
+
+serviceContainers.forEach(container => {
+  const image = container.querySelector("div");
+  const link = container.querySelector("a");
+
+  container.addEventListener("mouseenter", () => {
+    if (image) image.style.boxShadow = "6px 6px 1.6rem 4px #5c5c5c6c";
+    if (link) link.style.textDecoration = "underline";
+  });
+
+  container.addEventListener("mouseleave", () => {
+    if (image) image.style.boxShadow = "none";
+    if (link) link.style.textDecoration = "none";
+  });
+});
+
+  </script>
+  <script src="../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./style.css" rel="stylesheet">
+  <title>sign up</title>
+  <style>
+    *{
+  padding: 0;
+  margin: 0;
+}
+main{
+  width: 100%;
+  height: 100vh;
+}
+.signup-image-section{
+  width: 60%;
+height: 100%;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+padding: 2rem;
+background-image: url('../assets/back_signup.png');
+}
+.signup-info-section {
+  align-content: center;
+  background: radial-gradient(circle at bottom left,#2e062bfb,#000A2A,#000A2A,#000A2A);
+
+}
+.signup-form{
+  background-color: #FEFEFE1A;
+  width: fit-content;
+  height: 80%;
+  margin: auto;
+}
+.margin{
+  margin: 1rem;
+}
+.padding{
+  padding: 0.2rem;
+}
+.margin-top{
+  margin: 1rem;
+  margin-top: 2rem;
+}
+.padding-right-left{
+  padding:0.3rem;
+}
+
+@media (max-width: 768px) {
+  .signup-image-section{
+    display: none;
+  }
+  .signup-info-section{
+    width: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+<main class="flex">
+    <div id="back-btn" class="absolute flex items-center top-5 left-5 cursor-pointer"><img class="w-4 h-4 m-0.5" src="../assets/ArrowRight.png" alt=""><p class="underline text-white">Back</p></div>
+  <div class="signup-image-section">
+  </div>
+  <div class="signup-info-section w-full h-full" >
+<div class="signup-form cursor-pointer">
+  <h2 class="text-white text-2xl text-center font-[700] margin padding">Sign Up</h2>
+  <div class="margin padding  text-white flex justify-center border-2 text-center rounded-md">
+  <img class="" src="../assets/icons_ Google.png" alt="">
+  <input type="button" value="Continue with Google" class="">
+  </div>
+    <div class="margin padding  text-white flex justify-center border-2 text-center rounded-md">
+  <img class="" src="../assets/icons_ Facebook.png" alt="">
+  <input type="button" value="Continue with Facebook" class="">
+  </div>
+  <div class="flex justify-around text-white align-middle content-center text-center margin-top">
+    <div class="w-[10rem] h-0.5 bg-white "></div>
+    <div class="text-[11px]">or</div>
+    <div class="w-[10rem] h-0.5 bg-white"></div>
+  </div>
+      <div class="margin padding-right-left  font-light  text-white  border-2 rounded-md">
+        <input type="text" placeholder="Your FullName" class="w-full text-white placeholder:text-white">
+      </div>
+    <div class="relative">
+      <input type="password" placeholder="Your BirthDay" class="margin padding-right-left flex justify-between  font-light border-2 rounded-md w-[21.7rem] text-white placeholder:text-white">
+      <img src="../assets/prithday.png" alt="" class="absolute top-1.5 right-6">
+    </div>
+    <div class="relative">
+      <input type="password" placeholder="Your Email" class="margin padding-right-left flex justify-between  font-light border-2 rounded-md w-[21.7rem] text-white placeholder:text-white">
+      <img src="../assets/email.png" alt="" class="absolute top-2.5 right-6">
+    </div>
+    <div class="relative">
+      <input type="password" placeholder="Your Password" class="margin padding-right-left flex justify-between  font-light border-2 rounded-md w-[21.7rem] text-white placeholder:text-white">
+      <img src="../assets/pass.png" alt="" class="absolute top-1.5 right-6">
+    </div>
+    <div class="relative">
+      <input type="button" value="Sign Up" class="margin padding-right-left flex justify-between  font-medium rounded-md w-[21.7rem] bg-white border-0 text-black ">
+    </div>
+</div>
+  </div>
+</main>
+<script src="../app.js"></script>
+</body>
+</html>
